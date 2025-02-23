@@ -1,0 +1,23 @@
+package Java.com.paymentapp.entity.Payment;
+
+import Java.com.paymentapp.entity.User.PreferredLanguage;
+import Java.com.paymentapp.entity.User.UserRole;
+import lombok.*;
+
+import java.sql.Timestamp;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString(onlyExplicitlyIncluded = true)
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+public class Payment {
+    Integer id;
+    Integer fromAccountId;
+    Integer toAccountId;
+    Integer orderId;
+    Integer amount;
+    PaymentStatus status;
+    Timestamp createdAt;
+}

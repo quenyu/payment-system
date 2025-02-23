@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Система Платежей</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            color: #333;
+        }
+        header {
+            background: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+        .lang-switcher {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        main {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.5;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 20px;
+            background: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Система Платежей</h1>
+    <div class="lang-switcher">
+        <select onchange="location = this.value;">
+            <option value="index.html" selected>Русский</option>
+            <option value="index_en.html">English</option>
+        </select>
+    </div>
+</header>
+
+<main>
+    <p>
+        Клиент имеет счет в банке и кредитную карту. Оплачивайте заказы, переводите средства, блокируйте карту или аннулируйте счет. Администратор может блокировать кредитную карту при превышении кредитного лимита.
+    </p>
+    <a class="btn" href="registration">Войти</a>
+    <a class="btn" href="register.html">Регистрация</a>
+</main>
+</body>
+</html>

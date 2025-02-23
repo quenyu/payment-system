@@ -1,0 +1,12 @@
+package Java.com.paymentapp.entity.CreditCard;
+
+import lombok.*;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString(onlyExplicitlyIncluded = true)
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+public class CreditCardEntity {
+}

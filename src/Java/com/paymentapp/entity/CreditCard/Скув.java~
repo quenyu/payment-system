@@ -1,0 +1,4 @@
+package Java.com.paymentapp.entity.CreditCard;
+
+public enum Скув {
+}

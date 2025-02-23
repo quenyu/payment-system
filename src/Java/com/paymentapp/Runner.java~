@@ -1,0 +1,24 @@
+package Java.com.paymentapp;
+
+import Java.com.paymentapp.dao.UserDAO;
+import Java.com.paymentapp.entity.User.PreferredLanguage;
+import Java.com.paymentapp.entity.User.UserEntity;
+import Java.com.paymentapp.entity.User.UserRole;
+
+public class Runner {
+    public static void main(String[] args) {
+        UserDAO userDAO = UserDAO.getInstance();
+        UserEntity user = new UserEntity();
+        user.setEmail("email");
+        user.setPasswordHash("passwordHash");
+        user.setFirstName("AdaDADASDD");
+        user.setLastName("lastName");
+        user.setRole(UserRole.CLIENT);
+        user.setPreferredLanguage(PreferredLanguage.RU);
+        user.setCreatedAt(new java.sql.Timestamp(System.currentTimeMillis()));
+//        userDAO.save(user);
+
+        System.out.println(userDAO.findById(1).get().getFirstName());
+        System.out.println(userDAO.update(user).getFirstName());
+    }
+}

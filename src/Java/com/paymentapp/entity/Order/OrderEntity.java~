@@ -1,0 +1,12 @@
+package Java.com.paymentapp.entity.Order;
+
+import lombok.*;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString(onlyExplicitlyIncluded = true)
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+public class OrderEntity {
+}

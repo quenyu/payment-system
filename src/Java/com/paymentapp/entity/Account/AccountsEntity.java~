@@ -1,0 +1,19 @@
+package Java.com.paymentapp.entity.Accounts;
+
+import lombok.*;
+
+import java.sql.Timestamp;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString(onlyExplicitlyIncluded = true)
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+public class AccountsEntity {
+    Integer id;
+    Integer user_id;
+    String account_number;
+    Integer balance;
+    AccountsStatus status;
+    Timestamp created_at;
+}
