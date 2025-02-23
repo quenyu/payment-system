@@ -1,0 +1,186 @@
+:root {
+    --primary-color: #1A1A1A;
+    --secondary-color: #2C2C2C;
+    --accent-color: #E07A5F;
+    --background-color: #121212;
+    --text-color: #EDEDED;
+    --success-color: #81B29A;
+    --danger-color: #E07A5F;
+    --muted-text-color: #9A9A9A;
+    --button-hover-color: #C86A54;
+    --dark-bg: #1a1a1a;
+    --darker-bg: #2d2d2d;
+}
+
+.custom-bg-dark {
+    background-color: var(--dark-bg);
+}
+
+.text-accent {
+    color: var(--accent-color);
+}
+
+.border-secondary {
+    border-color: var(--secondary-color) !important;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+}
+.navbar {
+    background: var(--primary-color);
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--secondary-color);
+}
+.navbar-brand {
+    color: var(--text-color);
+    font-weight: 600;
+}
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.auth-buttons .btn {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.85rem;
+    border-width: 2px;
+    border-radius: 4px;
+    transition: background-color 0.3s, border-color 0.3s;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+}
+.auth-buttons .btn.btn-outline-light {
+    background-color: transparent;
+    border-color: var(--muted-text-color);
+    color: var(--muted-text-color);
+}
+.auth-buttons .btn.btn-outline-light:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--accent-color);
+    color: var(--text-color);
+}
+.auth-buttons .btn.btn-primary {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--text-color);
+}
+.auth-buttons .btn.btn-primary:hover {
+    background-color: var(--button-hover-color);
+    border-color: var(--button-hover-color);
+}
+.auth-section {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.btn-outline-light {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    transition: all 0.3s ease;
+}
+.btn-outline-light:hover {
+    background: var(--accent-color);
+    color: var(--text-color);
+    transform: translateY(-1px);
+}
+.btn-primary {
+    background: var(--accent-color);
+    transition: all 0.3s ease;
+}
+.btn-primary:hover {
+    background: var(--button-hover-color);
+    transform: translateY(-1px);
+}
+.sidebar {
+    background: var(--primary-color);
+    min-height: calc(100vh - 100px);
+    padding: 2rem 1rem;
+    border-right: 1px solid var(--secondary-color);
+}
+.nav-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.75rem;
+}
+.sidebar a {
+    color: var(--text-color);
+    padding: 0.75rem;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+.sidebar a:hover {
+    background: var(--secondary-color);
+}
+.main-content {
+    padding: 2rem;
+    min-height: calc(100vh - 120px);
+}
+.card {
+    background: var(--primary-color);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease,  box-shadow 0.2s ease;
+}
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.card-body {
+    color: var(--text-color);
+}
+.stat-card {
+    background: var(--secondary-color);
+    border-left: 4px solid var(--accent-color);
+}
+.stat-card .card-title {
+    color: var(--muted-text-color);
+    font-size: 0.95rem;
+}
+.transaction-table {
+    border-collapse: separate;
+    border-spacing: 0 8px;
+}
+.transaction-table tr {
+    background: var(--secondary-color);
+    border-radius: 8px;
+}
+.transaction-table th,
+.transaction-table td {
+    border: none;
+    padding: 1rem;
+}
+.badge {
+    padding: 0.4em 0.8em;
+    border-radius: 6px;
+    font-weight: 500;
+}
+.footer {
+    background: var(--primary-color);
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-top: 1px solid var(--secondary-color);
+}
+.text-muted {
+    color: var(--muted-text-color) !important;
+}
+.bootstrap-select .dropdown-menu li a {
+    color: var(--text-color);
+}
+.needs-validation .form-control:invalid,
+.needs-validation .form-select:invalid {
+    border-color: var(--danger-color);
+}

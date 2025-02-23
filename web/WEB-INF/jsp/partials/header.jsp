@@ -1,0 +1,37 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand fs-4" href="${pageContext.request.contextPath}/">
+      <i class="fas fa-coins me-2"></i><fmt:message key="navbar.title"/>
+    </a>
+    <div class="d-flex g-3 align-items-center auth-section">
+      <%@include file="/WEB-INF/jsp/lang-switcher.jsp" %>
+      <div class="auth-buttons d-flex align-items-center">
+        <c:if test="${empty sessionScope.user}">
+          <a href="${pageContext.request.contextPath}/login" class="btn btn-outline-light">
+            <i class="fas fa-sign-in-alt me-2"></i>
+            <span style="font-size: 16px; font-weight: 600"><fmt:message key="button.signin"/></span>
+          </a>
+          <a href="${pageContext.request.contextPath}/registration" class="btn btn-primary">
+            <i class="fas fa-user-plus me-2"></i>
+            <span style="font-size: 16px; font-weight: 600"><fmt:message key="button.register"/></span>
+          </a>
+        </c:if>
+        <c:if test="${not empty sessionScope.user}">
+          <a href="${pageContext.request.contextPath}/profile" class="btn btn-outline-light me-2">
+            <i class="fas fa-user-circle me-2"></i>
+            <span style="font-size: 16px; font-weight: 600"><fmt:message key="button.profile"/></span>
+          </a>
+          <form action="${pageContext.request.contextPath}/logout" method="post" class="d-inline">
+            <button type="submit" class="btn btn-outline-light">
+              <i class="fas fa-sign-out-alt me-2"></i>
+              <span style="font-size: 16px; font-weight: 600"><fmt:message key="button.logout"/></span>
+            </button>
+          </form>
+        </c:if>
+      </div>
+    </div>
+  </div>
+</nav>
